@@ -45,7 +45,7 @@ import java.util.Map;
  * outsourced to (imported) classes.
  *
  */
-@ServicePath("")
+@ServicePath("mensa")
 @ManualDeployment
 public class Mensa extends RESTService {
 

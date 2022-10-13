@@ -67,7 +67,7 @@ public class MensaTest {
   // version does not matter in tests
   private static final ServiceNameVersion testTemplateService = new ServiceNameVersion(Mensa.class.getCanonicalName(),"0.1");
 
-  private static final String mainPath = "";
+  private static final String mainPath = "mensa";
 
 
   /**
