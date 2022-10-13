@@ -129,10 +129,12 @@ public class MensaTest {
         
     try {
       c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
-      ClientResponse result = c.sendRequest("GET", "/dishes/1", """
-""", "text/plain", "*/*", new HashMap<>(), new Object[0]);
+      ClientResponse result = c.sendRequest("GET", "/dishes/{id}", """
+""", "text/plain", "*/*", new HashMap<>(), "1");
       System.out.println("Result of request with id: 980149: " + result.getResponse().trim());
     
+      Assert.assertEquals("[902890]", 200, result.getHttpCode());
+
     } catch (Exception e) {
       e.printStackTrace();
       fail("Exception: " + e);
