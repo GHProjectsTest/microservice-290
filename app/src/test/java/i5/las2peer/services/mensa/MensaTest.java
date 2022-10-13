@@ -116,6 +116,30 @@ public class MensaTest {
   }
 
 
+  /**
+   * 
+   * Test for the TestgetDishById_ID945352 method.
+   * 
+   */
+  @Test
+  public void testTestgetDishById_ID945352() {
+    MiniClientCoverage c = new MiniClientCoverage(mainPath);
+    c.setConnectorEndpoint(connector.getHttpEndpoint());
+    
+        
+    try {
+      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
+      ClientResponse result = c.sendRequest("GET", "/dishes/1", """
+""", "text/plain", "*/*", new HashMap<>(), new Object[0]);
+      System.out.println("Result of request with id: 980149: " + result.getResponse().trim());
+    
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+
+    
+  }
 
 
 
